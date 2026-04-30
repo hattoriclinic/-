@@ -177,20 +177,6 @@
 
 </body>
 
-<script>
-  const slides = document.querySelectorAll(".slide");
-  let index = 0;
-
-  setInterval(() => {
-    slides[index].classList.remove("active");
-    index = Math.floor(Math.random() * slides.length);
-    slides[index].classList.add("active");
-  }, 3000);
-</script>
-
-</html>
-
-
 <style>
 .img {
   width: 300px;
@@ -215,22 +201,29 @@
 
 <div class="container">
 
+  <div class="slider">
+    <img src="s1.jpg" class="slide active">
+    <img src="s2.jpg" class="slide">
+    <img src="s3.jpg" class="slide">
+  </div>
+
+</div>
+
+<!-- 👇JSはここ！！ -->
 <script>
-     const slides = document.querySelectorAll(".slide");
-     let index = 0;
-   
-     setInterval(() => {
-       slides[index].classList.remove("active");
-       index = Math.floor(Math.random() * slides.length); // ランダム
-       slides[index].classList.add("active");
-     }, 3000);
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }, 3000);
 </script>
 
-<div class="slider">
-  <img src="s1.jpg" class="slide active">
-  <img src="s2.jpg" class="slide">
-  <img src="s3.jpg" class="slide">
-</div>
+</body>
+</html>
+
 
 <section>
   <h2>診療時間</h2>
