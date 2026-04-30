@@ -175,6 +175,21 @@
 </head>
 <body>
 
+</body>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove("active");
+    index = Math.floor(Math.random() * slides.length);
+    slides[index].classList.add("active");
+  }, 3000);
+</script>
+
+</html>
+
 
 <style>
 .img {
