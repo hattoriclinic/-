@@ -19,7 +19,8 @@
     .header-inner {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start; /* ←これに変更 */
+      gap: 10px; /* 文字と画像の間の余白 */
     }
     .title {
       text-align: left;
@@ -152,6 +153,8 @@
       <p>地域に寄り添う医療</p>
     </div>
 
+
+    
     <img src="character.png" class="char">
   </div>
 </header>
