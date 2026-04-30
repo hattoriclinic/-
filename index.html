@@ -9,20 +9,7 @@
       background-color: #f5f9fc;
       background-image: radial-gradient(#dbefff 1px, transparent 1px);
       background-size: 20px 20px;
-    }
-    
-    <script>
-      const slides = document.querySelectorAll(".slide");
-      let index = 0;
-    
-      setInterval(() => {
-        slides[index].classList.remove("active");
-        index = Math.floor(Math.random() * slides.length); // ランダム
-        slides[index].classList.add("active");
-      }, 3000);
-    </script>
-
-    
+    } 
 
     header {
       background: linear-gradient(to right, #eef7fc, #eafaf1);
@@ -205,6 +192,17 @@
 
 
 <div class="container">
+
+<script>
+     const slides = document.querySelectorAll(".slide");
+     let index = 0;
+   
+     setInterval(() => {
+       slides[index].classList.remove("active");
+       index = Math.floor(Math.random() * slides.length); // ランダム
+       slides[index].classList.add("active");
+     }, 3000);
+</script>
 
 <div class="slider">
   <img src="s1.jpg" class="slide active">
