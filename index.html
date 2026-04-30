@@ -11,12 +11,17 @@
       background-size: 20px 20px;
     }
 
-    header {
-      background-color: white;
-      color: #2a7db8;
-      padding: 30px 20px;
-      text-align: center;
-      border-bottom: 3px solid #6ec1e4;
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .title {
+      text-align: left;
+    }
+    .char {
+      width: 60px;   /* サイズ調整 */
+      height: auto;
     }
     
     section {
@@ -85,9 +90,14 @@
     scroll-behavior: smooth;
   }
   @media (max-width: 600px) {
-    header {
-      padding: 15px;
+    .char {
+      width: 40px;
     }
+
+  .header-inner {
+    flex-direction: row;
+  }
+}
     h1 {
       font-size: 20px;
     }
@@ -131,8 +141,14 @@
 </style>
   
 <header>
-  <h1>服部歯科医院</h1>
-  <p></p>
+  <div class="header-inner">
+    <div class="title">
+      <h1>服部歯科医院</h1>
+      <p>地域に寄り添う医療</p>
+    </div>
+
+    <img src="character.png" class="char">
+  </div>
 </header>
 
 <div class="container">
