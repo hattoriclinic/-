@@ -10,6 +10,19 @@
       background-image: radial-gradient(#dbefff 1px, transparent 1px);
       background-size: 20px 20px;
     }
+    
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      let index = 0;
+    
+      setInterval(() => {
+        slides[index].classList.remove("active");
+        index = Math.floor(Math.random() * slides.length); // ランダム
+        slides[index].classList.add("active");
+      }, 3000);
+    </script>
+
+    
 
     header {
       background: linear-gradient(to right, #eef7fc, #eafaf1);
@@ -141,6 +154,24 @@
       width: 120px;
     }
   }
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  border-radius: 10px;
+}
+
+.slide.active {
+  display: block;
+}
+    
 </style>
 </head>
 <body>
@@ -170,7 +201,11 @@
 
 <div class="container">
 
-
+<div class="slider">
+  <img src="s1.jpg" class="slide active">
+  <img src="s2.jpg" class="slide">
+  <img src="s3.jpg" class="slide">
+</div>
 <img src="s1.jpg" style="width:100%;">
 
 <section>
