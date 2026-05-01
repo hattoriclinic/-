@@ -32,16 +32,36 @@
       flex-shrink: 0;
     }
     
+    .slider {
+      position: relative;
+    }
+    
     .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
       display: none;
     }
-
+    
     .slide.active {
       display: block;
     }
-
-    .slider img {
+    
+    .slide img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+/* 👇テキスト */
+    .slide-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
     }
 
     
@@ -115,9 +135,7 @@
     scroll-behavior: smooth;
   }
 
-  .slide {
-    border-radius: 0;
-  }
+  
         
   @media (max-width: 600px) {
     .char {
