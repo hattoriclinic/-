@@ -42,11 +42,9 @@
     }
 
     .slide {
-      position: absolute;   /* ←これ重要 */
-      width: 100%;
-      height: 100%;
-      opacity: 0;           /* ←これも必要 */
-      transition: opacity 1s;
+      pwidth: 100%;
+      max-width: none;  /* ←これにする */
+      margin: auto;
     }
 
 
@@ -55,9 +53,9 @@
     }
    
     .slide img {
-      width: 100%;      /* ←これ重要 */
-      height: 100%;
-      object-fit: cover;
+      width: auto;      /* ←これ重要 */
+      height: auto;
+      max-width: 100%;
     }
 /* 👇テキスト */
     .slide-text {
