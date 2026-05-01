@@ -42,12 +42,11 @@
     }
 
     .slide {
-      position: relative;
+      position: absolute;   /* ←これ重要 */
       width: 100%;
-      max-width: 800px;
-      aspect-ratio: 5289 / 1708; /* ←これ重要 */
-      margin: auto;
-      overflow: hidden;
+      height: 100%;
+      opacity: 0;           /* ←これも必要 */
+      transition: opacity 1s;
     }
 
 
