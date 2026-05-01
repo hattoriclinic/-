@@ -41,12 +41,14 @@
 
     .slide {
       display: none;
-      position: relative;   /* ←これに変更 */
+      position: relative;
+      pacity: 0;              /* ←ここ重要 */
+      transition: opacity 1s;/* ←これに変更 */
     }
 
 
     .slide.active {
-      display: block;
+      opacity: 1;
     }
    
     .slide img {
