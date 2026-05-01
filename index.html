@@ -33,11 +33,13 @@
     }
     
     .slider {
+      position: relative;
       width: 100%;
       max-width: 800px;
+      aspect-ratio: 5289 / 1708;
       margin: auto;
+      overflow: hidden;
     }
-
 
     .slide {
       position: absolute;
@@ -54,8 +56,8 @@
    
     .slide img {
       width: auto;      /* ←これ重要 */
-      max-width: 100%;  /* はみ出し防止 */
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
 /* 👇テキスト */
     .slide-text {
