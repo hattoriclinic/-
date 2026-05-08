@@ -276,6 +276,25 @@
       display: block;
 
     }
+
+    .fade-right {
+  
+      opacity: 0;
+  
+      transform: translateX(60px);
+  
+      transition: all 1s ease;
+
+    }
+
+
+    .fade-right.show {
+ 
+      opacity: 1;
+  
+      transform: translateX(0);
+
+    }
     
     td, th {
       height: 60px;
@@ -547,6 +566,35 @@
   </div>
 </section>
 
+
+<section class="fade-left">
+    カード内容
+</section>
+
+<script>
+    
+  const targets = document.querySelectorAll('.fade-left');
+
+    
+  window.addEventListener('scroll', () => {
+      
+    targets.forEach(target => {
+        
+      const rect = target.getBoundingClientRect();
+
+       
+      if(rect.top < window.innerHeight - 100){
+          
+        target.classList.add('show');
+        
+      }
+      
+    });
+    
+  });
+</script>
+
+
 <section>
   <div class="container">
     <h2>当院の特徴</h2>
@@ -592,6 +640,7 @@
 
   
 </div>
+
 
 </body>
 </html>
